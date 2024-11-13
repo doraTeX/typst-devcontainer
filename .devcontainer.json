@@ -1,0 +1,50 @@
+{
+  //  "image": "ghcr.io/jmuchovej/devcontainers/typst:latest",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".",
+    "args": {
+      "VARIANT": "latest",
+      "TYPST_VERSION": "v0.12.0",
+      "TYPSTYLE_VERSION": "v0.12.1"
+    }
+  },
+  "name": "Typst",
+  // "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Typst LSP and renderer.
+        "myriad-dreamin.tinymist",
+        // Useful extensions for dev experience
+        "shardulm94.trailing-spaces", // Highlights straight whitespace
+        "stkb.rewrap", // Enables word-wrap on comments
+        "tomoki1207.pdf" // PDF Preview
+      ],
+      "settings": {
+        "files.eol": "\n",
+        "editor.formatOnSave": true,
+        "[typst]": {
+          "editor.formatOnSave": true
+        },
+        "tinymist.formatterMode": "typstyle",
+        "files.associations": {
+          "*.typ": "typst"
+        },
+        "workspaceKeybindings.myTypst.enabled": true // Flag to enable keybindings specific to Typst dev container
+      },
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils": {
+      "installZsh": true,
+      "username": "vscode",
+      "upgradePackages": true
+    }
+  },
+  "mounts": [
+    "source=/System/Library/Fonts,target=/usr/local/share/fonts/SystemLibraryFonts,type=bind,consistency=cached",
+    "source=/Library/Fonts,target=/usr/local/share/fonts/LibraryFonts,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/Library/Fonts,target=/usr/local/share/fonts/homeLibraryFonts,type=bind,consistency=cached",
+  ],
+}
