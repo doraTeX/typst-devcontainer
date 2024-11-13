@@ -31,7 +31,7 @@
         "files.associations": {
           "*.typ": "typst"
         },
-        "workspaceKeybindings.myTypst.enabled": true // Flag to enable keybindings specific to Typst dev container
+        "containerKeybindings.myTypst.enabled": true // Flag to enable keybindings specific to Typst dev container
       },
     }
   },
