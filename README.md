@@ -6,7 +6,7 @@ For more details, see [my blog post](https://qiita.com/doraTeX/items/e38a4a36782
 
 ### Software Requirements
 * macOS
-* Visual Studio Code (VS Code)
+* Visual Studio Code (VS Code) + `Dev Containers` extension
 * Docker Desktop for Mac
 
 ### Granting Permissions
