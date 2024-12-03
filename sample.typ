@@ -1,3 +1,5 @@
+#import "@preview/showybox:2.0.3": *
+
 #set text(font: "Hiragino Mincho ProN")
 #show strong: set text(font: "Hiragino Sans", weight: "regular")
 
@@ -37,11 +39,6 @@
   today.display("[year]年[month padding:none]月[day padding:none]日")
   v(2em)
 }
-
-
-#import "@preview/showybox:2.0.1": *
-
-
 
 #let lemma-number = counter("lemma-number")
 #let lemma(body) = {
